@@ -1,0 +1,15 @@
+Phần 1: Phân tích vấn đề
+
+Terminal dùng khoảng trắng để tách lệnh và các tham số. Khi gõ `cd Menu Thang 9`, nó hiểu là bạn đang đưa vào 3 tham số riêng: "Menu", "Thang" và "9", chứ không phải 1 tên thư mục. Nó đi tìm thư mục tên "Menu" (hoặc báo thừa tham số), mà thư mục đó không tồn tại nên báo lỗi Cannot find path.
+
+Phần 2: Hoàn thiện bài
+
+Cách 1: đặt tên thư mục trong dấu nháy kép để Terminal hiểu đó là 1 tên duy nhất:
+
+cd "Menu Thang 9"
+
+Cách 2: dùng dấu backtick (`) trước mỗi khoảng trắng, đây là ký tự escape của PowerShell:
+
+cd Menu` Thang` 9
+
+(Ngoài ra dùng dấu nháy đơn 'Menu Thang 9' cũng được, nhưng 2 cách trên là đủ cho đề bài.)
